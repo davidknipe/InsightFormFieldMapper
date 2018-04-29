@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsightFormFieldMapper", "..\..\InsightFormFieldMapper\InsightFormFieldMapper.csproj", "{EE292BD0-5EBB-4488-A31D-CBD3B211F28B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nuget", "Nuget", "{7BA5EFDF-29E9-435B-9730-A3EE44322D4C}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Nuget\Package\InsightFormFieldMapper.nuspec = ..\..\Nuget\Package\InsightFormFieldMapper.nuspec
+		..\..\Nuget\pack.bat = ..\..\Nuget\pack.bat
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE292BD0-5EBB-4488-A31D-CBD3B211F28B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE292BD0-5EBB-4488-A31D-CBD3B211F28B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE292BD0-5EBB-4488-A31D-CBD3B211F28B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE292BD0-5EBB-4488-A31D-CBD3B211F28B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4A37A5E7-8F19-4E58-A43C-E0FEF28A6667}
+	EndGlobalSection
+EndGlobal

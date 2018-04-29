@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>InsightFormFieldMapper</id>
+    <title>Map Episerver Form field submissions to Episerver Insight profile values</title>
+    <version>1.0.0</version>
+    <authors>David Knipe</authors>
+    <owners>David Knipe</owners>
+    <licenseUrl>https://github.com/davidknipe/InsightFormFieldMapper/blob/master/LICENSE</licenseUrl>
+    <projectUrl>http://www.david-tec.com/2018/04/populate-episerver-insight-profiles-from-episerver-formfields/</projectUrl>
+    <iconUrl>https://www.david-tec.com/global/media/insightprofilestoreapiexamples/insight.png?v=1.0.0</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Map Episerver Form fields to populate Episerver Insight profile values</description>
+    <releaseNotes>Initial release</releaseNotes>
+    <tags>Episerver CMS, Episerver Insight, Episerver Profile Store</tags>
+    <dependencies>
+      <dependency id="EPiServer.Forms.UI" version="[4.9, 5.0)" />
+      <dependency id="RestSharp" version="[106.2.2, 107.0]" />
+    </dependencies>
+  </metadata>
+</package>
