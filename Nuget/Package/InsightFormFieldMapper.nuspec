@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>InsightFormFieldMapper</id>
-    <title>Map Episerver Form field submissions to Episerver Insight profile values</title>
+    <title>Insight Form field mapper</title>
     <version>1.0.0</version>
     <authors>David Knipe</authors>
     <owners>David Knipe</owners>
