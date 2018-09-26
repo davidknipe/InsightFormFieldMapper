@@ -8,6 +8,9 @@ namespace InsightFormFieldMapper.Impl
     [ServiceConfiguration(typeof(IMappedProfilePropertyNames), Lifecycle = ServiceInstanceScope.Singleton)]
     public class MappedProfilePropertyNames : IMappedProfilePropertyNames
     {
+        public const string FirstNameKey = "[first name] part of Name";
+        public const string LastNameKey = "[last name] part of Name";
+
         public MappedProfilePropertyNames()
         {
             CustomPayloadPropertyNames = new List<string>();
@@ -39,5 +42,12 @@ namespace InsightFormFieldMapper.Impl
 
         /// <inheritdoc />
         public List<string> CustomPayloadPropertyNames { get; set; }
+
+        /// <inheritdoc />
+        public List<string> MappedPropertyNames { get; } = new List<string>()
+        {
+            FirstNameKey,
+            LastNameKey
+        };
     }
 }

@@ -8,6 +8,7 @@ using EPiServer.Forms.Core.PostSubmissionActor;
 using EPiServer.Forms.Helpers.Internal;
 using EPiServer.Forms.Implementation.Elements;
 using EPiServer.ServiceLocation;
+using InsightFormFieldMapper.Impl;
 using InsightFormFieldMapper.Init;
 using InsightFormFieldMapper.Interfaces;
 using Newtonsoft.Json.Linq;
@@ -36,16 +37,28 @@ namespace InsightFormFieldMapper.Actors
             var deviceId = GetDeviceId(HttpRequestContext);
             if (deviceId == null) return null;
 
-            var formElementMapping = this.GetMappedProfileFields(FormIdentity.GetFormBlock());
+            var formElementMapping = GetMappedProfileFields(FormIdentity.GetFormBlock());
             var friendlyResults =
                 _formDataRepository.Service.TransformSubmissionDataWithFriendlyName(SubmissionData.Data,
                     SubmissionFriendlyNameInfos, true);
 
+            var firstName = string.Empty;
+            var lastName = string.Empty;
             var updateProfile = false;
             JToken currentProfile = null;
             foreach (var formField in friendlyResults)
             {
-                if (formElementMapping.ContainsKey(formField.Key))
+                if (formElementMapping.ContainsKey(formField.Key) 
+                    && formElementMapping[formField.Key] == MappedProfilePropertyNames.FirstNameKey)
+                {
+                    firstName = formField.Value.ToString();
+                }
+                else if (formElementMapping.ContainsKey(formField.Key)
+                         && formElementMapping[formField.Key] == MappedProfilePropertyNames.LastNameKey)
+                {
+                    lastName = formField.Value.ToString();
+                }
+                else if (formElementMapping.ContainsKey(formField.Key))
                 {
                     if (currentProfile == null) currentProfile = GetProfile(deviceId);
                     updateProfile = true;
@@ -53,7 +66,14 @@ namespace InsightFormFieldMapper.Actors
                 }
             }
 
-            if (updateProfile)
+            if (firstName != string.Empty || lastName != string.Empty)
+            {
+                if (currentProfile == null) currentProfile = GetProfile(deviceId);
+                updateProfile = true;
+                SetProfileValue(currentProfile, "Name", firstName + " " + lastName);
+            }
+
+            if (updateProfile && currentProfile != null)
             {
                 return UpdateProfile(currentProfile);
             }

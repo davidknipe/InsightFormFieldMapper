@@ -17,6 +17,7 @@ namespace InsightFormFieldMapper.Impl
             var mappedProfilePropertyNames1 = mappedProfilePropertyNames;
             _items = new List<SelectItem>();
 
+            mappedProfilePropertyNames1.MappedPropertyNames.ForEach(x => _items.Add(new SelectItem() { Text = x, Value = x }));
             mappedProfilePropertyNames1.CorePropertyNames.ForEach(x => _items.Add(new SelectItem() { Text = x, Value = x }));
             mappedProfilePropertyNames1.InfoPropertyNames.ForEach(x => _items.Add(new SelectItem() { Text = x, Value = x }));
             mappedProfilePropertyNames1.CustomPayloadPropertyNames.ForEach(x => _items.Add(new SelectItem() { Text = x, Value = x }));

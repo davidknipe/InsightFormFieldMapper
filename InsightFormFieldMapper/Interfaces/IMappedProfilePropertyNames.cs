@@ -21,5 +21,10 @@ namespace InsightFormFieldMapper.Interfaces
         /// Used if we want to allow custom payload properties to be selectable in the UI
         /// </summary>
         List<string> CustomPayloadPropertyNames { get; set; }
+
+        /// <summary>
+        /// Mapped properties
+        /// </summary>
+        List<string> MappedPropertyNames { get; }
     }
 }

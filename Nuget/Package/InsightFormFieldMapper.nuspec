@@ -3,15 +3,15 @@
   <metadata>
     <id>InsightFormFieldMapper</id>
     <title>Insight Form field mapper</title>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <authors>David Knipe</authors>
     <owners>David Knipe</owners>
     <licenseUrl>https://github.com/davidknipe/InsightFormFieldMapper/blob/master/LICENSE</licenseUrl>
     <projectUrl>http://www.david-tec.com/2018/04/populate-episerver-insight-profiles-from-episerver-formfields/</projectUrl>
-    <iconUrl>https://www.david-tec.com/global/media/insightprofilestoreapiexamples/insight.png?v=1.0.0</iconUrl>
+    <iconUrl>https://www.david-tec.com/global/media/insightprofilestoreapiexamples/insight.png?v=1.1.0</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Map Episerver Form fields to populate Episerver Insight profile values</description>
-    <releaseNotes>Initial release</releaseNotes>
+    <releaseNotes>Added ability to map first and last name form fields to Name property</releaseNotes>
     <tags>Episerver CMS, Episerver Insight, Episerver Profile Store</tags>
     <dependencies>
       <dependency id="EPiServer.Forms.UI" version="[4.9, 5.0)" />
