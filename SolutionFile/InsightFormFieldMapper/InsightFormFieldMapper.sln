@@ -9,6 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nuget", "Nuget", "{7BA5EFDF
 	ProjectSection(SolutionItems) = preProject
 		..\..\Nuget\Package\InsightFormFieldMapper.nuspec = ..\..\Nuget\Package\InsightFormFieldMapper.nuspec
 		..\..\Nuget\pack.bat = ..\..\Nuget\pack.bat
+		..\..\README.md = ..\..\README.md
 	EndProjectSection
 EndProject
 Global

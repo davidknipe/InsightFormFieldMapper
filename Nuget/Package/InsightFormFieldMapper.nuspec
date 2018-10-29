@@ -3,7 +3,7 @@
   <metadata>
     <id>InsightFormFieldMapper</id>
     <title>Insight Form field mapper</title>
-    <version>1.1.0</version>
+    <version>1.1.1</version>
     <authors>David Knipe</authors>
     <owners>David Knipe</owners>
     <licenseUrl>https://github.com/davidknipe/InsightFormFieldMapper/blob/master/LICENSE</licenseUrl>
@@ -11,11 +11,11 @@
     <iconUrl>https://www.david-tec.com/global/media/insightprofilestoreapiexamples/insight.png?v=1.1.0</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Map Episerver Form fields to populate Episerver Insight profile values</description>
-    <releaseNotes>Added ability to map first and last name form fields to Name property</releaseNotes>
+    <releaseNotes>v1.1.1 Ensures compatible RestSharp version is used, v106.5.x versions currently have an issue which prevents the form actor running</releaseNotes>
     <tags>Episerver CMS, Episerver Insight, Episerver Profile Store</tags>
     <dependencies>
       <dependency id="EPiServer.Forms.UI" version="[4.9, 5.0)" />
-      <dependency id="RestSharp" version="[106.2.2, 107.0]" />
+      <dependency id="RestSharp" version="[106.2.2, 106.5.0)" />
     </dependencies>
   </metadata>
 </package>
