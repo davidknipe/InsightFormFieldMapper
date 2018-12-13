@@ -114,7 +114,7 @@ namespace InsightFormFieldMapper.Actors
             // Set up the request
             var client = new RestClient(_profileStoreConfig.Service.RootApiUrl);
             var request = new RestRequest(resourceGetProfile, Method.GET);
-            request.AddHeader("Ocp-Apim-Subscription-Key", _profileStoreConfig.Service.SubscriptionKey);
+            request.AddHeader("Authorization", $"epi-single {_profileStoreConfig.Service.SubscriptionKey}");
 
             // Filter the profiles based on the current device id
             request.AddParameter("$filter", "DeviceIds eq " + deviceId);
@@ -138,7 +138,7 @@ namespace InsightFormFieldMapper.Actors
             // Set up the update profile request
             var client = new RestClient(_profileStoreConfig.Service.RootApiUrl);
             var profileUpdateRequest = new RestRequest(resourceUpdateProfile, Method.PUT);
-            profileUpdateRequest.AddHeader("Ocp-Apim-Subscription-Key", _profileStoreConfig.Service.SubscriptionKey);
+            profileUpdateRequest.AddHeader("Authorization", $"epi-single {_profileStoreConfig.Service.SubscriptionKey}");
             profileUpdateRequest.AddUrlSegment("id", profileObject["ProfileId"]);
 
             // Populate the body to update the profile
