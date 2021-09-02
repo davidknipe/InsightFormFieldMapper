@@ -1,6 +1,10 @@
 # Episerver Insight has been replaced with Optimizely Data Plaform (ODP)
 
-See more information on ODP here: https://www.optimizely.com/products/intelligence/data-platform/
+> See more information on ODP here: https://www.optimizely.com/products/intelligence/data-platform/
+
+## This repository is now archived
+
+***
 
 # Episerver Insight Form Field Mapper
 Map Episerver Form fields to Episerver Insight / Profile properties
